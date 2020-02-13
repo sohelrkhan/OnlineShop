@@ -1,0 +1,7 @@
+Super Admin
+Id- root@gmail.com
+Pass- Root@123
+
+User
+Id- customer@gmail.com
+Pass- Customer@123

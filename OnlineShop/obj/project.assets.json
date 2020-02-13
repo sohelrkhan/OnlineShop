@@ -13037,11 +13037,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sohel\\Downloads\\onlineshop-master\\onlineshop-master\\OnlineShop\\OnlineShop.csproj",
+      "projectUniqueName": "E:\\Web Development 2019\\Working Project 2020\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
       "projectName": "OnlineShop",
-      "projectPath": "C:\\Users\\sohel\\Downloads\\onlineshop-master\\onlineshop-master\\OnlineShop\\OnlineShop.csproj",
+      "projectPath": "E:\\Web Development 2019\\Working Project 2020\\OnlineShop\\OnlineShop\\OnlineShop.csproj",
       "packagesPath": "C:\\Users\\sohel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sohel\\Downloads\\onlineshop-master\\onlineshop-master\\OnlineShop\\obj\\",
+      "outputPath": "E:\\Web Development 2019\\Working Project 2020\\OnlineShop\\OnlineShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
