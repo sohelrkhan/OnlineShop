@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Data;
 using OnlineShop.Models;
@@ -10,6 +11,7 @@ using OnlineShop.Utility;
 namespace OnlineShop.Areas.Customer.Controllers
 {
     [Area("Customer")]
+    [Authorize(Roles = "User")]
     public class OrderController : Controller
     {
         private ApplicationDbContext _db;

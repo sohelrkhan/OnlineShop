@@ -14,7 +14,7 @@ using X.PagedList;
 namespace OnlineShop.Controllers
 {
     [Area("Customer")]
-    
+    [Authorize(Roles = "User")]
     public class HomeController : Controller
     {
         private ApplicationDbContext _db;
@@ -40,9 +40,9 @@ namespace OnlineShop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        
-        //GET product detail acation method
 
+        //GET product detail acation method
+        
         public ActionResult Detail(int? id)
         {
             
@@ -60,6 +60,7 @@ namespace OnlineShop.Controllers
         }
 
         //POST product detail acation method
+        
         [HttpPost]
         [ActionName("Detail")]
         public ActionResult ProductDetail(int? id)
@@ -86,6 +87,7 @@ namespace OnlineShop.Controllers
             return RedirectToAction(nameof(Index));
         }
         //GET Remove action methdo
+       
         [ActionName("Remove")]
         public IActionResult RemoveToCart(int? id)
         {
@@ -102,6 +104,7 @@ namespace OnlineShop.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        
         [HttpPost]
 
         public IActionResult Remove(int? id)
@@ -120,7 +123,7 @@ namespace OnlineShop.Controllers
         }
 
         //GET product Cart action method
-
+        
         public IActionResult Cart()
         {
             List<Products> products = HttpContext.Session.Get<List<Products>>("products");

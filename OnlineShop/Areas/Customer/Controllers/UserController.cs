@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Data;
@@ -10,6 +11,7 @@ using OnlineShop.Models;
 namespace OnlineShop.Areas.Customer.Controllers
 {
     [Area("Customer")]
+    [Authorize(Roles = "Super user")]
     public class UserController : Controller
     {
         UserManager<IdentityUser> _userManager;
