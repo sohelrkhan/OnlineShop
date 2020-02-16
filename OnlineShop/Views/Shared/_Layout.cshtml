@@ -60,14 +60,20 @@
                         @if (userRole == "Super user")
                         {
                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Orders" asp-action="Index">Orders</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">Product Type</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
+                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Special Tag</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-                            </li>
+
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Customer" asp-controller="User" asp-action="Index">Users</a>
@@ -81,17 +87,18 @@
                                 <a class="nav-link text-dark" asp-area="Admin" asp-controller="Role" asp-action="Assign">Assign Role</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Orders" asp-action="Index">Orders</a>
-                            </li>
+
                         }
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                (@count)
-                            </a>
-                        </li>
+                       
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    (@count)
+                                </a>
+                            </li>
+                        
+                           
                     </ul>
                 </div>
             </div>

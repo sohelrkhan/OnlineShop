@@ -11,7 +11,7 @@ using OnlineShop.Models;
 namespace OnlineShop.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    [Authorize(Roles = "Super user")]
+    
     public class UserController : Controller
     {
         UserManager<IdentityUser> _userManager;
@@ -21,6 +21,8 @@ namespace OnlineShop.Areas.Customer.Controllers
             _userManager = userManager;
             _db = db;
         }
+
+        [Authorize(Roles = "Super user")]
         public IActionResult Index()
         {
             var dd = _userManager.GetUserId(HttpContext.User);
@@ -54,8 +56,8 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View();
         }
 
-        
 
+        [Authorize(Roles = "Super user")]
         public async Task<IActionResult>Edit(string id)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
@@ -66,6 +68,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Super user")]
         [HttpPost]
         public async Task<IActionResult>Edit(ApplicationUser user)
         {
@@ -85,7 +88,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(userInfo);
         }
 
-
+        [Authorize(Roles = "Super user")]
         public async Task<IActionResult> Details(string id)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
@@ -96,6 +99,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Super user")]
         public async Task<IActionResult>Locout(string id)
         {
             if(id==null)
@@ -110,6 +114,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Super user")]
         [HttpPost]
         public async Task<IActionResult>Locout(ApplicationUser user)
         {
@@ -129,6 +134,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(userInfo);
         }
 
+        [Authorize(Roles = "Super user")]
         public async Task<IActionResult>Active(string id)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
@@ -139,6 +145,7 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Super user")]
         [HttpPost]
         public async Task<IActionResult> Active(ApplicationUser user)
         {
@@ -158,6 +165,8 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(userInfo);
         }
 
+
+        [Authorize(Roles = "Super user")]
         public async Task<IActionResult> Delete(string id)
         {
             var user = _db.ApplicationUsers.FirstOrDefault(c => c.Id == id);
@@ -168,6 +177,8 @@ namespace OnlineShop.Areas.Customer.Controllers
             return View(user);
         }
 
+
+        [Authorize(Roles = "Super user")]
         [HttpPost]
         public async Task<IActionResult> Delete(ApplicationUser user)
         {

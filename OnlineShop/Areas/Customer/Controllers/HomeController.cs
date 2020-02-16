@@ -14,7 +14,7 @@ using X.PagedList;
 namespace OnlineShop.Controllers
 {
     [Area("Customer")]
-    [Authorize(Roles = "User")]
+    
     public class HomeController : Controller
     {
         private ApplicationDbContext _db;
